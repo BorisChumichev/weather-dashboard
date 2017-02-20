@@ -2,6 +2,14 @@ import superagent from 'superagent'
 
 const AMOUNT_OF_RAINFALL_URL = 'http://private-4945e-weather34.apiary-proxy.com/weather34/rain'
 
+export const setNumericValue = (valueName, value) => {
+  return {
+    type: 'SET_NUMERIC_VALUE',
+    valueName,
+    value
+  }
+}
+
 export const setAmountOfRainfall = dataset => {
   return {
     type: 'SET_AMOUNT_OF_RAINFALL',
