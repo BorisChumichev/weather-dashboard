@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getAmountOfRainfall } from '../actions/dashboard'
+import DashboardGrid from '../components/dashboard-grid'
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    isLoading: state.isLoading,
     amountOfRainfall: state.amountOfRainfall
   }
 }
@@ -14,21 +16,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-class App extends Component {
-  componentDidMount() {
-    this.props.getAmountOfRainfall()
-  }
-
-  render() {
-    return (
-      <div onClick={() => this.props.getAmountOfRainfall()}>
-        {JSON.stringify(this.props.amountOfRainfall)}
-      </div>
-    )
-  }
-}
-
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-  )(App)
+  )(DashboardGrid)
