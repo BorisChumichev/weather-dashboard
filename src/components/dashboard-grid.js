@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './dashboard-grid.css'
 import Spinner from './spinner'
+import DashboardCell from './dashboard-cell'
 import TemperatureInput from '../containers/temperature-input'
 import PressureInput from '../containers/pressure-input'
 
@@ -15,8 +16,12 @@ class DashboardGrid extends Component {
     return isLoading
       ? <Spinner />
       : <div className='dashboardGrid'>
-          <TemperatureInput />
-          <PressureInput />
+          <DashboardCell>
+            <TemperatureInput />
+          </DashboardCell>
+          <DashboardCell>
+            <PressureInput />
+          </DashboardCell>
         </div>
   }
 }

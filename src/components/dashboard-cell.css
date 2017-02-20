@@ -1,0 +1,13 @@
+.dashboardCell {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  height: 50%;
+  border: 1px solid #ccc;
+  border-left: none;
+  box-sizing: border-box;
+}
+
+.dashboardCell:nth-child(2n) {
+  border-right: none;
+}
