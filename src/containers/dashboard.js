@@ -6,7 +6,8 @@ import DashboardGrid from '../components/dashboard-grid'
 const mapStateToProps = (state, ownProps) => {
   return {
     isLoading: state.isLoading,
-    amountOfRainfall: state.amountOfRainfall
+    amountOfRainfall: state.amountOfRainfall,
+    chances: state.chances
   }
 }
 

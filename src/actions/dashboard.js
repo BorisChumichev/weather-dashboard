@@ -32,11 +32,10 @@ export const showError = message => {
 
 export const getAmountOfRainfall = () => {
   return dispatch => {
-    dispatch(toggleLoading())
 
     const handleSuccess = ({ body }) => {
-      dispatch(toggleLoading())
       dispatch(setAmountOfRainfall(body))
+      dispatch(toggleLoading())
     }
 
     const handleError = error => {

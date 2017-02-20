@@ -6,8 +6,11 @@
   border: 1px solid #ccc;
   border-left: none;
   box-sizing: border-box;
+  overflow: hidden;
+  vertical-align: top;
 }
 
 .dashboardCell:nth-child(2n) {
   border-right: none;
 }
+
