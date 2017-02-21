@@ -1,15 +1,6 @@
-import { merge, compose, prop, map, partial } from 'ramda'
+import { merge } from 'ramda'
+import { computeChances, formatApiResponce } from '../utils'
 
-import { chanceOfRain } from '../utils'
-
-const formatApiResponce = compose(prop('days'), prop(0))
-const computeChances = (pressure, temperature, amounts) => map(
-    compose(
-      partial(chanceOfRain, [ pressure, temperature ]),
-      prop('amount')
-    ),
-    amounts
-  )
 
 const defaultState =
   { amountOfRainfall: null
